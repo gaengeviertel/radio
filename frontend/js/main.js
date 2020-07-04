@@ -1,5 +1,26 @@
 const buttons = document.querySelectorAll('.control_button')
+const approaches = document.querySelectorAll('.approach')
 
+adjustApproachHeights()
+
+window.addEventListener('resize', () => {
+  adjustApproachHeights()
+})
+
+function adjustApproachHeights () {
+  if (approaches && approaches.length > 0) {
+    if (window.innerWidth >= 960) {
+      approaches.forEach((approach) => {
+        const approachOffset = Math.round(window.pageYOffset + approach.getBoundingClientRect().top)
+        approach.style.height = `${window.innerHeight - (2 * (approachOffset))}px`
+      })
+    } else {
+      approaches.forEach((approach) => {
+        approach.style.height = 'auto'
+      })
+    }
+  }
+}
 if (buttons && buttons.length > 0) {
   buttons.forEach((button) => {
     button.addEventListener('click', (event) => {
