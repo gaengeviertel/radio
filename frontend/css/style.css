@@ -38,7 +38,8 @@ body {
     }
     .infotext{
         display: block !important;
-
+        opacity: 1 !important;
+        max-height: none !important;
     }
 }
 

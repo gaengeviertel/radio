@@ -1,3 +1,7 @@
+<xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+    <xsl:output omit-xml-declaration="no" method="html" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
+                doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes" encoding="UTF-8"/>
+    <xsl:template match="/icestats">
 <!doctype html>
 <html lang="en">
 
@@ -38,9 +42,15 @@
                 </div>-->
         <!--stream-->
         <!--ganzer stream muss klickbar werden-->
-        <a class="row p-2 mb-3 stream" href="https://google.de" target="_blank">
+
+
+      <xsl:for-each select="source">
+        <xsl:choose>
+            <xsl:when test="listeners">
+
+        <a class="row p-2 mb-3 stream" href="{@server_url}" target="_blank">
           <div class="col col-2">
-            <div class="control_button" id="hallo" role="button">
+            <div class="control_button" id="substring(@mount,2)" role="button">
               <svg class="play-button visible" x="0px" y="0px" viewBox="0 0 373 373" xml:space="preserve">
                 <path
                   d="M61.8,2.6c3-1.7,6.3-2.6,9.72.6c3.3,0,6.7,0.9,9.7,2.6l230.1,167.2c6,3.4,9.7,9.8,9.7,16.7c0,6.9-3.7,13.3-9.7,16.7L81.1,370.4c-6,3.4-13.3,3.4-19.3,0c-6-3.5-9.7-9.8-9.716.7V19.3C52.1,12.4,55.8,6,61.8,2.6z" />
@@ -88,24 +98,41 @@
                 </g>
               </svg>
             </div>
-            <!--
-                <img class="control_button" id="controls hallo_button" src="img/play.svg" width="20" height="20"
-                     onclick="togglePlayPause('hallo')" role="button">
--->
-            <audio id="hallo_audio" height="0" width="0" class="audio-file">
-              <source src="http://radio.gaengeviertel.tk:8000/hallo" type="audio/ogg" />
-            </audio>
-            <audio id="moin_audio" height="0" width="0" class="audio-file">
-              <source src="http://radio.gaengeviertel.tk:8000/moin" type="audio/ogg" />
+            <audio id="{substring(@mount,2)}_video" playsinline="true" preload="">
+              <source src="{@mount}" type="audio/mp3"/>
             </audio>
           </div>
           <div class="col col-4">
-            nvstik
+            <xsl:choose>
+            <xsl:when test="server_name">
+              <xsl:value-of select="server_name"/>
+            </xsl:when>
+            <xsl:otherwise>
+              nvstik
+            </xsl:otherwise>
+          </xsl:choose>
           </div>
           <div class="col col-6">
-            slow techno
+            <xsl:choose>
+            <xsl:when test="server_genre">
+              <xsl:value-of select="server_genre"/>
+            </xsl:when>
+            <xsl:otherwise>
+              slow techno
+            </xsl:otherwise>
+          </xsl:choose>
           </div>
         </a>
+      </xsl:when>
+      <xsl:otherwise>
+        <a class="row p-2 mb-3 stream" href="#" target="_blank">
+          <div class="col col-12">
+              currently no stream :( why don't you make one up yourself? &rarr;
+          </div>
+        </a>
+      </xsl:otherwise>
+        </xsl:choose>
+      </xsl:for-each>
 
         <!--program header-->
         <div class="row">
@@ -205,3 +232,6 @@
 </script>
 
 </html>
+
+</xsl:template>
+</xsl:stylesheet>
