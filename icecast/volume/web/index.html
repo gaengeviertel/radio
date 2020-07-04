@@ -4,7 +4,6 @@
   <xsl:template match="/icestats">
   <xsl:text disable-output-escaping='yes'>&lt;!DOCTYPE html&gt;</xsl:text>
 <html lang="en">
-
 <head>
   <!-- Required meta tags -->
   <meta charset="utf-8" />
@@ -15,7 +14,7 @@
     integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw=="
     crossorigin="anonymous" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
-    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous" />
   <link href="css/style.css" rel="stylesheet" />
   <link rel="icon" type="image/svg" href="img/fav.svg" />
   <!--FAVICON-->
@@ -28,22 +27,11 @@
   <div class="row">
     <div class="col-12 col-xl-5 pt-5 pl-5 pr-5">
       <div class="container-fluid p-0">
-        <!--radio header-->
         <div class="row">
           <div class="col-12 p-0 font-header pb-4">
             radio
           </div>
         </div>
-        <!--no stream-->
-        <!--   <div class="row p-2 mb-3 stream">
-                    <div class="col col-12">
-                        currently no stream :( why don't you make one up yourself? &rarr;
-                    </div>
-                </div>-->
-        <!--stream-->
-        <!--ganzer stream muss klickbar werden-->
-
-
       <xsl:for-each select="source">
         <xsl:choose>
             <xsl:when test="listeners">
@@ -55,8 +43,7 @@
                 <path
                   d="M61.8,2.6c3-1.7,6.3-2.6,9.72.6c3.3,0,6.7,0.9,9.7,2.6l230.1,167.2c6,3.4,9.7,9.8,9.7,16.7c0,6.9-3.7,13.3-9.7,16.7L81.1,370.4c-6,3.4-13.3,3.4-19.3,0c-6-3.5-9.7-9.8-9.716.7V19.3C52.1,12.4,55.8,6,61.8,2.6z" />
               </svg>
-              <svg class="pause-button" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 356.919 356.918"
+              <svg class="pause-button" version="1.1" id="Capa_1" x="0px" y="0px" viewBox="0 0 356.919 356.918"
                 style="enable-background:new 0 0 356.919 356.918;" xml:space="preserve">
                 <g>
                   <g id="Layer_8">
@@ -127,24 +114,6 @@
           </div>
         </div>
         <div class="program-container">
-          <!--no program-->
-          <!-- <div class="row p-2 mb-3 program">
-            <div class="col col-12">
-              no upcoming program? join us and add one! &amp;rarr;
-            </div>
-          </div> -->
-          <!--program-->
-          <!-- <a class="row p-2 mb-3 program" href="#" target="_blank" target="_blank">
-            <div class="col col-2">
-              23. apr
-            </div>
-            <div class="col col-4">
-              2100
-            </div>
-            <div class="col col-6">
-              Lesung Rote Zora
-            </div>
-          </a> -->
         </div>
       </div>
     </div>
