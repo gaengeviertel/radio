@@ -12,5 +12,6 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.7"
-  }
+  },
+  "dependencies": {}
 }
