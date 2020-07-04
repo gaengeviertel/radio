@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link href="css/style.css" rel="stylesheet">
+    <link rel="icon" type="image/svg" href="img/fav.svg"> <!--FAVICON-->
+    <link rel="shortcut icon" type="image/x-icon" href="img/fav.svg">
+    <title>Radio Gängeviertel</title>
+</head>
+<body>
+
+    <div class="row">
+        <div class="col-12 col-xl-5 pt-5 pl-5 pr-5">
+            <div class="container-fluid p-0">
+<!--radio header-->
+                <div class="row">
+                   <div class="col-12 p-0 font-header pb-4"> 
+                        radio
+                   </div>
+                </div>
+<!--no stream--> 
+             <!--   <div class="row p-2 mb-3 stream">
+                    <div class="col col-12">
+                        currently no stream :( why don't you make one up yourself? &rarr;
+                    </div>
+                </div>-->
+<!--stream-->
+               <!--ganzer stream muss klickbar werden-->
+                <div class="row p-2 mb-3 stream">
+                    <div class="col col-2">
+                        <div class="control_button" id="controls hallo_button" onclick="togglePlayPause('hallo')" role="button">
+                            <svg x="0px" y="0px" viewBox="0 0 373 373" xml:space="preserve">
+                                <path class="stream control_button" d="M61.8,2.6c3-1.7,6.3-2.6,9.72.6c3.3,0,6.7,0.9,9.7,2.6l230.1,167.2c6,3.4,9.7,9.8,9.7,16.7c0,6.9-3.7,13.3-9.7,16.7L81.1,370.4c-6,3.4-13.3,3.4-19.3,0c-6-3.5-9.7-9.8-9.716.7V19.3C52.1,12.4,55.8,6,61.8,2.6z"/>
+                            </svg>    
+                        </div>
+<!--
+                <img class="control_button" id="controls hallo_button" src="img/play.svg" width="20" height="20"
+                     onclick="togglePlayPause('hallo')" role="button">
+-->
+                        <audio id="hallo_video" height="0" width="0">
+                            <source src="http://radio.gaengeviertel.tk:8000/hallo" type="audio/ogg"/>
+                        </audio>
+                    </div>
+                     <div class="col col-4">
+                        nvstik
+                    </div>
+                    <div class="col col-6">
+                        slow techno
+                    </div>
+                </div>
+                      
+<!--program header-->
+                <div class="row">
+                   <div class="col-12 p-0 font-header pb-4 pt-4">  
+                  program
+                   </div>
+                </div>     
+<!--no program-->                       
+                <div class="row p-2 mb-3 program">
+                    <div class="col col-12">
+                    no upcoming program? join us and add one! &rarr;
+                    </div>
+                </div>
+<!--program-->                 
+                <!--<div class="row p-2 mb-3 program">
+                    <div class="col col-2">
+                    23. apr
+                    </div>
+                     <div class="col col-4">
+                        2100
+                    </div>
+                    <div class="col col-6">
+                        Lesung Rote Zora
+                    </div>
+                </div>    -->      
+            </div>
+        </div>
+    
+<!--approach-->
+        <div class="col-12 col-xl-5 pt-5 pr-5 pl-5">
+            <div class="font-header pb-4">project</div>
+                <p class="approach">this project responds to the necessity of shaping the future and represents a space for the formulation of utopias and their experimental testing in the here and now. as a modern digital medium, radio is able to connect people and form autonomous communities. at the same time, it promotes the possibility of interdisciplinary collaboration and participation and is intended to transform people from passive listeners to active broadcasters.<br> all content is organized autonomously and decentralized. gängeviertel radio acts as an alternative network tool for discussion, exchange and development, and supports the principles of mutual aid and solidarity as well as resistance to all forms of discrimination and oppression. if you would like to contribute and you agree with the above principles, drop us a message on telegram.<br> anarchism is not a unified position, but a constant discussion that can be continued through this communication medium. start to live in the small as we want to live in the big.
+                </p>  
+        </div>
+<!--info-->
+        <div class="col-10 col-md-7 col-xl-2 pl-5 pt-5" style="background:transparent url('img/star.svg') no-repeat center">
+           <ul>
+                 <span><li><a href="#" class="info hover-text" target="_blank">&rarr; participate</a><p class="infotext">if you would like to participate or have a question, contact us via telegram</p></li></span>
+                 <span><li><a href="#" class="info hover-text" target="_blank">&rarr; stream</a><p class="infotext">you would like to stream? that's cool! if you don't have the key and don't know anyone at gängeviertel, use the link above and contact us</p></li></span>
+                 <span><li><a href="#" class="info hover-text" target="_blank">&rarr; get notifications</a><p class="infotext">join our telegram channel to keep on track with current programs and streams</p></li></span>
+                 <span><li><a href="#" class="info hover-text" target="_blank">&rarr; add program</a><p class="infotext">let everybody know what's up next by adding your upcomimg program</p></li></span>
+                <span><li><a href="#" class="info hover-text" target="_blank">&rarr; github</a><p class="infotext">if you would like to contribute to the code, send us a pull request on github</p></li></span>
+                <span><li><a href="#" class="info hover-text" target="_blank">&rarr; donate</a><p class="infotext">support gängeviertel e.V. to get through corona</p></li></span>
+           </ul>
+        </div>
+    </div>
+            
+<div class="blob">
+
+<img src="img/blob.png">
+</div>
+
+</body>
+<script>
+    function togglePlayPause(buttonid) {
+        let playpause = document.getElementById(buttonid + "_button");
+        let video = document.getElementById(buttonid + "_video");
+
+        if (video.paused || video.ended) {
+            playpause.title = "pause";
+            playpause.src = "img/pause.svg"
+            if (video.play() !== undefined) {
+                video.play().then(function() {
+                    video.play();
+                }).catch(function (error) {
+                    console.log("shit")
+                    console.log(error)
+                })
+            }
+        } else {
+            playpause.title = "play";
+            playpause.src = "img/play.svg"
+            if (video.pause() !== undefined) {
+                video.pause().then(function() {
+                    video.pause();
+                }).catch(function (error) {
+                    console.log("shit")
+                    console.log(error)
+                })
+            }
+        }
+    }
+
+</script>
+</html>
