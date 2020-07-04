@@ -2,6 +2,7 @@ import json
 
 from flask import Flask
 from flask_caching import Cache
+from flask_cors import CORS
 from datetime import datetime, timedelta
 import caldav as caldav
 import os
@@ -21,8 +22,8 @@ class RadCal:
         for event in events:
             time = event.vobject_instance.vevent.dtstart.value + timedelta(hours=2)
 
-            cevent = {'date': event.vobject_instance.vevent.dtstart.value.strftime("%Y%m%d"),
-                      'time': time.strftime("%H%M"),
+            cevent = {'date': event.vobject_instance.vevent.dtstart.value.strftime("%d. %b").lower(),
+                      'time': time.strftime("%H.%M"),
                       'description': event.vobject_instance.vevent.summary.value}
             if hasattr(event.vobject_instance.vevent, 'description'):
                 cevent["link"] = event.vobject_instance.vevent.description.value
@@ -35,6 +36,7 @@ cal = RadCal(os.environ["CAL_URL"])
 
 def create_app():
     app = Flask(__name__)
+    CORS(app)
     cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
     @app.route("/")
