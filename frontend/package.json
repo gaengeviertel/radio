@@ -1,0 +1,16 @@
+{
+  "name": "gv-radio-frontend",
+  "version": "1.0.0",
+  "description": "Frontend für das GV Radio",
+  "main": "index.js",
+  "private": "true",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "browser-sync start --server --files \"*.html, *.css, *.js, **/*.css, **/*.js\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.7"
+  }
+}
