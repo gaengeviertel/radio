@@ -2,7 +2,6 @@
     <xsl:output omit-xml-declaration="no" method="html" doctype-public="-//W3C//DTD XHTML 1.0 Strict//EN"
                 doctype-system="http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd" indent="yes" encoding="UTF-8"/>
     <xsl:template match="/icestats">
-<!doctype html>
 <html lang="en">
 
 <head>
@@ -103,31 +102,17 @@
             </audio>
           </div>
           <div class="col col-4">
-            <xsl:choose>
-            <xsl:when test="server_name">
               <xsl:value-of select="server_name"/>
-            </xsl:when>
-            <xsl:otherwise>
-              nvstik
-            </xsl:otherwise>
-          </xsl:choose>
           </div>
           <div class="col col-6">
-            <xsl:choose>
-            <xsl:when test="server_genre">
               <xsl:value-of select="server_genre"/>
-            </xsl:when>
-            <xsl:otherwise>
-              slow techno
-            </xsl:otherwise>
-          </xsl:choose>
           </div>
         </a>
       </xsl:when>
       <xsl:otherwise>
         <a class="row p-2 mb-3 stream" href="#" target="_blank">
           <div class="col col-12">
-              currently no stream :( why don't you make one up yourself? &rarr;
+              currently no stream :( why don't you make one up yourself? &amp;rarr;
           </div>
         </a>
       </xsl:otherwise>
@@ -144,7 +129,7 @@
           <!--no program-->
           <!-- <div class="row p-2 mb-3 program">
             <div class="col col-12">
-              no upcoming program? join us and add one! &rarr;
+              no upcoming program? join us and add one! &amp;rarr;
             </div>
           </div> -->
           <!--program-->
@@ -182,35 +167,35 @@
     <div class="col-10 col-md-7 col-xl-2 pl-5 pt-5" style="background:transparent url('img/star.svg') no-repeat center">
       <ul>
         <span>
-          <li><a href="#" target="_blank" class="info hover-text" target="_blank">&rarr; participate</a>
+          <li><a href="#" target="_blank" class="info hover-text" target="_blank">&amp;rarr; participate</a>
             <p class="infotext">if you would like to participate, have an idea or a question, contact us via telegram
             </p>
           </li>
         </span>
         <span>
-          <li><a href="#" target="_blank" class="info hover-text" target="_blank">&rarr; stream</a>
+          <li><a href="#" target="_blank" class="info hover-text" target="_blank">&amp;rarr; stream</a>
             <p class="infotext">you would like to stream? that's cool! if you don't have the password and don't know
               anyone
               at gängeviertel, use the link above and contact us</p>
           </li>
         </span>
         <span>
-          <li><a href="#" target="_blank" class="info hover-text" target="_blank">&rarr; get notifications</a>
+          <li><a href="#" target="_blank" class="info hover-text" target="_blank">&amp;rarr; get notifications</a>
             <p class="infotext">join our telegram channel to keep on track with current shows</p>
           </li>
         </span>
         <span>
-          <li><a href="#" target="_blank" class="info hover-text" target="_blank">&rarr; add program</a>
+          <li><a href="#" target="_blank" class="info hover-text" target="_blank">&amp;rarr; add program</a>
             <p class="infotext">anything planned? let everybody know what's up next by adding your upcomimg event</p>
           </li>
         </span>
         <span>
-          <li><a href="#" target="_blank" class="info hover-text" target="_blank">&rarr; github</a>
+          <li><a href="#" target="_blank" class="info hover-text" target="_blank">&amp;rarr; github</a>
             <p class="infotext">if you would like to contribute to the code, create a pull request on github</p>
           </li>
         </span>
         <span>
-          <li><a href="#" target="_blank" class="info hover-text" target="_blank">&rarr; donate</a>
+          <li><a href="#" target="_blank" class="info hover-text" target="_blank">&amp;rarr; donate</a>
             <p class="infotext">support your local viertel</p>
           </li>
         </span>

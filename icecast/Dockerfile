@@ -14,7 +14,7 @@ COPY --from=build-env /usr/local/bin/fResync /usr/local/bin/fResync
 COPY --from=build-env /usr/local/bin/fPls /usr/local/bin/fPls
 
 ADD volume /etc/icecast2
-RUN mv volume/web/index.html index.xsl
+RUN mv /etc/icecast2/web/index.html /etc/icecast2/web/index.xsl
 
 USER icecast:icecast
 EXPOSE 8000
