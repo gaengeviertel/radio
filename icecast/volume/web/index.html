@@ -36,9 +36,9 @@
         <xsl:choose>
             <xsl:when test="listeners">
 
-        <a class="row p-2 mb-3 stream" href="{@server_url}" target="_blank">
+        <a class="row p-2 mb-3 stream" href="{server_url}" target="_blank">
           <div class="col col-2">
-            <div class="control_button" id="substring(@mount,2)" role="button">
+            <div class="control_button" id="{substring(@mount,2)}" role="button">
               <svg class="play-button visible" x="0px" y="0px" viewBox="0 0 373 373" xml:space="preserve">
                 <path
                   d="M61.8,2.6c3-1.7,6.3-2.6,9.72.6c3.3,0,6.7,0.9,9.7,2.6l230.1,167.2c6,3.4,9.7,9.8,9.7,16.7c0,6.9-3.7,13.3-9.7,16.7L81.1,370.4c-6,3.4-13.3,3.4-19.3,0c-6-3.5-9.7-9.8-9.716.7V19.3C52.1,12.4,55.8,6,61.8,2.6z" />
@@ -85,7 +85,7 @@
                 </g>
               </svg>
             </div>
-            <audio id="{substring(@mount,2)}_video" playsinline="true" preload="">
+            <audio id="{substring(@mount,2)}_audio" playsinline="true" preload="">
               <source src="{@mount}" type="audio/mp3"/>
             </audio>
           </div>
@@ -93,14 +93,14 @@
               <xsl:value-of select="server_name"/>
           </div>
           <div class="col col-6">
-              <xsl:value-of select="server_genre"/>
+              <xsl:value-of select="genre"/>
           </div>
         </a>
       </xsl:when>
       <xsl:otherwise>
         <a class="row p-2 mb-3 stream" href="#" target="_blank">
           <div class="col col-12">
-              currently no stream :( why don't you make one up yourself? &amp;rarr;
+              currently no stream :( why don't you make one up yourself? &#8594;
           </div>
         </a>
       </xsl:otherwise>
@@ -137,35 +137,35 @@
     <div class="col-10 col-md-7 col-xl-2 pl-5 pt-5" style="background:transparent url('img/star.svg') no-repeat center">
       <ul>
         <span>
-          <li><a href="#" class="info hover-text" target="_blank">&amp;rarr; participate</a>
+          <li><a href="#" class="info hover-text" target="_blank">&#8594; participate</a>
             <p class="infotext">if you would like to participate, have an idea or a question, contact us via telegram
             </p>
           </li>
         </span>
         <span>
-          <li><a href="#" class="info hover-text" target="_blank">&amp;rarr; stream</a>
+          <li><a href="#" class="info hover-text" target="_blank">&#8594; stream</a>
             <p class="infotext">you would like to stream? that's cool! if you don't have the password and don't know
               anyone
               at gängeviertel, use the link above and contact us</p>
           </li>
         </span>
         <span>
-          <li><a href="#" class="info hover-text" target="_blank">&amp;rarr; get notifications</a>
+          <li><a href="#" class="info hover-text" target="_blank">&#8594; get notifications</a>
             <p class="infotext">join our telegram channel to keep on track with current shows</p>
           </li>
         </span>
         <span>
-          <li><a href="#" class="info hover-text" target="_blank">&amp;rarr; add program</a>
+          <li><a href="#" class="info hover-text" target="_blank">&#8594; add program</a>
             <p class="infotext">anything planned? let everybody know what's up next by adding your upcomimg event</p>
           </li>
         </span>
         <span>
-          <li><a href="#" class="info hover-text" target="_blank">&amp;rarr; github</a>
+          <li><a href="#" class="info hover-text" target="_blank">&#8594; github</a>
             <p class="infotext">if you would like to contribute to the code, create a pull request on github</p>
           </li>
         </span>
         <span>
-          <li><a href="#" class="info hover-text" target="_blank">&amp;rarr; donate</a>
+          <li><a href="#" class="info hover-text" target="_blank">&#8594; donate</a>
             <p class="infotext">support your local viertel</p>
           </li>
         </span>
