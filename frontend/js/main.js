@@ -1,3 +1,4 @@
+
 const buttons = document.querySelectorAll('.control_button')
 const approaches = document.querySelectorAll('.approach')
 

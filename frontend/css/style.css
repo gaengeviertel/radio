@@ -127,12 +127,12 @@ body {
   fill: #ff6633;
 }
 
-.program{
+.program, .program.nohover {
     color: #ff6633;
     border: 2px solid #ff6633;
 }
 
-.program:hover {
+.program:not(.nohover):hover {
     background: #ff6633;
     color: #b9b9b9;
     text-decoration: none;
