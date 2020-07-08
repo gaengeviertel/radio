@@ -158,6 +158,7 @@
              the status page
           -->
         <alias source="/" dest="/index.xsl"/>
+        <alias source="/manual" dest="/manual.html"/>
     </paths>
 
     <logging>

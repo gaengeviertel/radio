@@ -70,6 +70,7 @@ body {
     background-color: #ff6633;
     display: flex;
     border: 2px solid transparent;
+    line-height: 1.2em;
 }
 .stream .col:not(:first-child) {
   align-self: center;
@@ -106,6 +107,7 @@ body {
 .control_button svg {
   max-height: 26px;
   position: absolute;
+  width: 100%;
   top: 50%;
   transform: translateY(-50%);
   -webkit-transform: translateY(-50%);
@@ -131,6 +133,7 @@ body {
 .program, .program.nohover {
     color: #ff6633;
     border: 2px solid #ff6633;
+    line-height: 1.2em
 }
 
 .program:not(.nohover):hover {
