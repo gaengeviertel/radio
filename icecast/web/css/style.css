@@ -223,7 +223,7 @@ ul {
   z-index: -1;
   animation: move 10s ease-in-out infinite;
   transform-origin: 50% 50%;
-    overflow: hidden;
+  overflow: hidden;
 }
 
 @keyframes move {
@@ -234,5 +234,3 @@ ul {
   80%  { transform: scale(1.3) translate(0vw, 50vh) rotate(-20deg); }
   100% { transform: scale(1.5)   translate(10px, -30px); }
 }
-
-
