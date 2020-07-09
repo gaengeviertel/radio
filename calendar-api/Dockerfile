@@ -5,8 +5,7 @@ COPY Pipfile Pipfile.lock ./
 RUN pipenv lock -r > requirements.txt
 
 
-FROM python:3.8
-
+FROM python:3.8-slim
 COPY --from=mkrequirementstxt /workdir/requirements.txt /
 
 RUN pip install waitress -r /requirements.txt

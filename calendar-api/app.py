@@ -23,11 +23,12 @@ class RadCal:
             time = event.vobject_instance.vevent.dtstart.value + timedelta(hours=2)
 
             cevent = {'date': event.vobject_instance.vevent.dtstart.value.strftime("%d. %b").lower(),
-                      'time': time.strftime("%H.%M"),
+                      'time': time.strftime("%H:%M"),
                       'description': event.vobject_instance.vevent.summary.value}
             if hasattr(event.vobject_instance.vevent, 'description'):
                 cevent["link"] = event.vobject_instance.vevent.description.value
             custom_values.append(cevent)
+            custom_values.sort(key=lambda date: datetime.strptime(date["date"], '%d. %b'))
         return custom_values
 
 
@@ -40,7 +41,7 @@ def create_app():
     cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
     @app.route("/")
-    @cache.cached(timeout=300)
+    @cache.cached(timeout=90)
     def index():
         return json.dumps(cal.sh_all_events())
 

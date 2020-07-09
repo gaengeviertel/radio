@@ -10,6 +10,7 @@ python-dotenv = "*"
 flask = "*"
 flask-caching = "*"
 caldav = "*"
+flask-cors = "*"
 
 [requires]
 python_version = "3.8"
