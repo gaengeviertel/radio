@@ -8,7 +8,7 @@ Anarchism is not a unified position, but a constant discussion that can be conti
 
 ## background
 
-Thanks to corona / covid19 all events were canceled. Still in need of sharing music the idea of a radio came together and this is the finished product. 
+Thanks to covid19 all social events were canceled. Searching for a way to connect humans and to share music, talks and thoughts, the idea of a decentralized radio came together and this is the final product. 
 
 ## structure
 
@@ -16,4 +16,4 @@ Within the [icecast](icecast) folder you can find the whole frontend code and th
 
 ## usage
 
-For instruction on how to use this have a look into the different folder. 
+For instruction on how to use this have a look into the other folder. 
